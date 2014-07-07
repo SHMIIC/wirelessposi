@@ -386,6 +386,11 @@
               <FileType>1</FileType>
               <FilePath>.\lib\USART.C</FilePath>
             </File>
+            <File>
+              <FileName>spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\spi.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

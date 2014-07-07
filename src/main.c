@@ -8,6 +8,7 @@ void main(void)
 
 	rey_usart_config();
     rey_timer_config();
+    rey_spi_config();
 	EA = 1;
     while(1)
     {
@@ -15,6 +16,10 @@ void main(void)
         {
             systick = 0;
             P26=!P26;
+            PrintString1("ok\r\n");
+            
+            SPI_WriteToTxBuf(0xA5);//PrintStringSPI("hello SPI\r\n");
+            SPI_TrigTx();
         }
     }
 }

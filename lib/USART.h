@@ -4,10 +4,25 @@
 
 #include	"config.h"
 
-#define	COM_TX1_Lenth	128
-#define	COM_RX1_Lenth	128
-#define	COM_TX2_Lenth	128
-#define	COM_RX2_Lenth	128
+#ifndef COM_TX1_Lenth
+    #define	COM_TX1_Lenth	128
+#endif
+#ifndef COM_RX1_Lenth
+    #define	COM_RX1_Lenth	128
+#endif
+
+
+#ifndef COM_TX2_Lenth
+    #define	COM_TX2_Lenth	128
+#endif
+#ifndef COM_RX2_Lenth
+    #define	COM_RX2_Lenth	128
+#endif
+
+
+#ifndef USART_BUF_type
+    #define	USART_BUF_type	idata
+#endif
 
 #define	USART1	1
 #define	USART2	2
@@ -62,16 +77,16 @@ u8	USART_Configuration(u8 UARTx, COMx_InitDefine *COMx);
 
 #ifdef USE_USART1
 extern	COMx_Define	COM1;
-extern	u8	xdata TX1_Buffer[COM_TX1_Lenth];	//发送缓冲
-extern	u8 	xdata RX1_Buffer[COM_RX1_Lenth];	//接收缓冲
+extern	u8	USART_BUF_type TX1_Buffer[COM_TX1_Lenth];	//发送缓冲
+extern	u8 	USART_BUF_type RX1_Buffer[COM_RX1_Lenth];	//接收缓冲
 void PrintString1(u8 *puts);
 void TX1_write2buff(u8 dat);	//写入发送缓冲，指针+1
 #endif
 
 #ifdef USE_USART2
 extern	COMx_Define	COM2;
-extern	u8	xdata TX2_Buffer[COM_TX2_Lenth];	//发送缓冲
-extern	u8 	xdata RX2_Buffer[COM_RX2_Lenth];	//接收缓冲
+extern	u8	USART_BUF_type TX2_Buffer[COM_TX2_Lenth];	//发送缓冲
+extern	u8 	USART_BUF_type RX2_Buffer[COM_RX2_Lenth];	//接收缓冲
 void PrintString2(u8 *puts);
 void TX2_write2buff(u8 dat);	//写入发送缓冲，指针+1
 #endif

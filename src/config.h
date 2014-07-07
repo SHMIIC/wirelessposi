@@ -19,13 +19,24 @@
 
 /**************************************************************************/
 
-#define Main_Fosc_KHZ	(MAIN_Fosc / 1000)
 #define USART_BAUDRATE  (115200ul)
 
 /***********************************************************/
 
 
 #define USE_USART1
+//#define USART_USE_TIMER1  //not ok
+//#define USART_USE_TIMER2  //not ok
+
+#define	COM_TX1_Lenth	64
+#define	COM_RX1_Lenth	64
+
+#define	USART_BUF_type	idata
+
+
+
+#define	SPI_BUF_type	idata
+
 
 #define USE_TIMER0
 #define TIMER0_FREQ     (1000)
