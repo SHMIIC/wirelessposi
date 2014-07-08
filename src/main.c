@@ -17,9 +17,7 @@ void main(void)
             systick = 0;
             P26=!P26;
             PrintString1("ok\r\n");
-            
-            SPI_WriteToTxBuf(0xA5);//PrintStringSPI("hello SPI\r\n");
-            SPI_TrigTx();
+
         }
     }
 }

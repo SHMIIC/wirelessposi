@@ -1,4 +1,4 @@
-wifiposi
+wirelessposi
 ========
 
 # DS #
@@ -10,6 +10,6 @@ wifiposi
 - [x] configure internal clock;output the sysclk to pin and check it.
 - [x] configure Uart clock and Uart settings 
 - [x] Uart sending and receiving use buffer
-- [ ] configure SPI settings
-- [ ] SPI sending and receiving use buffer
+- [x] configure SPI settings
+- [x] SPI sending and receiving use buffer
 - [ ] design independent SPI-CMD RF satck
